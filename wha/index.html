@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatIf Generator - Where Curiosity Meets Infinite Possibilities</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fwhatifgen8836back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-white border-b border-border sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c5.514 0 10 4.486 10 10s-4.486 10-10 10S6 21.514 6 16 10.486 6 16 6zm-1 4v6l4 4 1.414-1.414L17 15.172V10h-2z"/>
+                        </svg>
+                        <span class="text-xl font-bold text-gradient-primary">WhatIf Generator</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-primary font-medium">Home</a>
+                    <a href="question_generator.html" class="text-text-secondary hover:text-primary transition-smooth">Create</a>
+                    <a href="community_gallery.html" class="text-text-secondary hover:text-primary transition-smooth">Community</a>
+                    <a href="topic_explorer.html" class="text-text-secondary hover:text-primary transition-smooth">Explore</a>
+                    <a href="user_profile.html" class="text-text-secondary hover:text-primary transition-smooth">Profile</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-text-secondary hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 via-secondary-50 to-accent-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-text-primary mb-6">
+                    Transform Your
+                    <span class="text-gradient-primary block">Curiosity</span>
+                    Into Infinite Possibilities
+                </h1>
+                <p class="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
+                    Where scientific rigor meets creative storytelling. Ask "what if" and discover answers across multiple narrative modes - from realistic outcomes to hilarious chaos.
+                </p>
+
+                <!-- Animated Question Examples -->
+                <div class="bg-white rounded-2xl p-6 mb-8 max-w-2xl mx-auto shadow-medium">
+                    <div class="text-left">
+                        <div class="text-sm text-text-muted mb-2">Try asking:</div>
+                        <div id="animated-question" class="text-lg font-medium text-text-primary h-12 flex items-center">
+                            "What if gravity was half as strong?"
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">Science Mode</span>
+                            <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm">Story Mode</span>
+                            <span class="px-3 py-1 bg-accent-100 text-accent-600 rounded-full text-sm">Funny Mode</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Question Input -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="What if..." 
+                               class="input-field text-lg py-4 pr-16 rounded-2xl shadow-medium"
+                               id="main-question-input">
+                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 btn-primary px-6 py-2 rounded-xl">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <a href="question_generator.html" class="text-primary hover:text-primary-700 text-sm font-medium">
+                            Or use our guided question builder →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid)" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-12 bg-white border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-primary">47,892</div>
+                    <div class="text-text-secondary">Questions Asked</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-secondary">156,234</div>
+                    <div class="text-text-secondary">Answers Generated</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-accent">23,567</div>
+                    <div class="text-text-secondary">Active Users</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-success">4.8/5</div>
+                    <div class="text-text-secondary">Community Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Questions Carousel -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Trending Questions</h2>
+                <p class="text-text-secondary">Discover what the community is curious about right now</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Trending Question Card 1 -->
+                <div class="card hover:shadow-medium transition-smooth cursor-pointer" onclick="window.location.href='answer_display.html'">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <img src="https://images.unsplash.com/photo-1687256457585-3608dfa736c5" 
+                                 alt="User avatar of Alex Chen" 
+                                 class="w-8 h-8 rounded-full object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                            <span class="text-sm text-text-secondary">Alex Chen</span>
+                        </div>
+                        <div class="flex items-center space-x-1 text-accent">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <span class="text-sm font-medium">847</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">What if humans could photosynthesize like plants?</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-primary-100 text-primary-700 rounded text-xs">Science</span>
+                        <span class="px-2 py-1 bg-secondary-100 text-secondary-700 rounded text-xs">Biology</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-text-muted">
+                        <span>5 answer modes</span>
+                        <span>2 hours ago</span>
+                    </div>
+                </div>
+
+                <!-- Trending Question Card 2 -->
+                <div class="card hover:shadow-medium transition-smooth cursor-pointer" onclick="window.location.href='answer_display.html'">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1beb9fc75-1762273370028.png" 
+                                 alt="User avatar of Sarah Martinez" 
+                                 class="w-8 h-8 rounded-full object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                            <span class="text-sm text-text-secondary">Sarah Martinez</span>
+                        </div>
+                        <div class="flex items-center space-x-1 text-accent">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <span class="text-sm font-medium">623</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">What if cats could talk but only complained?</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-accent-100 text-accent-600 rounded text-xs">Funny</span>
+                        <span class="px-2 py-1 bg-secondary-100 text-secondary-700 rounded text-xs">Animals</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-text-muted">
+                        <span>4 answer modes</span>
+                        <span>4 hours ago</span>
+                    </div>
+                </div>
+
+                <!-- Trending Question Card 3 -->
+                <div class="card hover:shadow-medium transition-smooth cursor-pointer" onclick="window.location.href='answer_display.html'">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54" 
+                                 alt="User avatar of Dr. Michael Thompson" 
+                                 class="w-8 h-8 rounded-full object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                            <span class="text-sm text-text-secondary">Dr. Michael Thompson</span>
+                        </div>
+                        <div class="flex items-center space-x-1 text-accent">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <span class="text-sm font-medium">1,234</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">What if time moved backwards for one day?</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-primary-100 text-primary-700 rounded text-xs">Physics</span>
+                        <span class="px-2 py-1 bg-secondary-100 text-secondary-700 rounded text-xs">Story</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-text-muted">
+                        <span>5 answer modes</span>
+                        <span>6 hours ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="community_gallery.html" class="btn-primary">View All Trending Questions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Community Answers -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Featured Community Answers</h2>
+                <p class="text-text-secondary">Discover brilliant insights from our creative community</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Featured Answer 1 -->
+                <div class="card">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1690192078217-d0a48326a335" 
+                             alt="Featured contributor Emma Wilson" 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div>
+                            <div class="font-semibold text-text-primary">Emma Wilson</div>
+                            <div class="text-sm text-text-secondary">Science Mode • 2.3k votes</div>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="px-3 py-1 bg-success-100 text-success rounded-full text-sm font-medium">Top Answer</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">What if humans hibernated like bears?</h3>
+                    <p class="text-text-secondary mb-4">
+                        "Human hibernation would revolutionize society. Our metabolism would slow dramatically, requiring massive caloric storage beforehand. Cities would need seasonal infrastructure, with 'hibernation districts' featuring climate-controlled pods..."
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 text-sm text-text-muted">
+                            <span class="flex items-center space-x-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>2,347</span>
+                            </span>
+                            <span class="flex items-center space-x-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>156</span>
+                            </span>
+                        </div>
+                        <a href="answer_display.html" class="text-primary hover:text-primary-700 text-sm font-medium">Read Full Answer →</a>
+                    </div>
+                </div>
+
+                <!-- Featured Answer 2 -->
+                <div class="card">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://images.unsplash.com/photo-1699156246635-98dcc81f1d64" 
+                             alt="Featured contributor James Rodriguez" 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div>
+                            <div class="font-semibold text-text-primary">James Rodriguez</div>
+                            <div class="text-sm text-text-secondary">Story Mode • 1.8k votes</div>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm font-medium">Viral</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">What if colors had flavors?</h3>
+                    <p class="text-text-secondary mb-4">
+                        "Maya discovered it on a Tuesday morning when her coffee tasted like the deep purple of her grandmother's curtains. The world had changed overnight, and suddenly every rainbow was a buffet..."
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 text-sm text-text-muted">
+                            <span class="flex items-center space-x-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>1,823</span>
+                            </span>
+                            <span class="flex items-center space-x-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>234</span>
+                            </span>
+                        </div>
+                        <a href="answer_display.html" class="text-primary hover:text-primary-700 text-sm font-medium">Read Full Story →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick-Start Templates -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Quick-Start Templates</h2>
+                <p class="text-text-secondary">Jump-start your curiosity with these popular question types</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Template Card 1 -->
+                <div class="card hover:shadow-medium transition-smooth cursor-pointer group" onclick="window.location.href='question_generator.html'">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-smooth">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Science & Technology</h3>
+                        <p class="text-sm text-text-secondary mb-4">Explore scientific possibilities and technological futures</p>
+                        <div class="text-xs text-text-muted">
+                            "What if we could upload memories?"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 2 -->
+                <div class="card hover:shadow-medium transition-smooth cursor-pointer group" onclick="window.location.href='question_generator.html'">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-smooth">
+                            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Social & Culture</h3>
+                        <p class="text-sm text-text-secondary mb-4">Imagine different social norms and cultural scenarios</p>
+                        <div class="text-xs text-text-muted">
+                            "What if lying was impossible?"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 3 -->
+                <div class="card hover:shadow-medium transition-smooth cursor-pointer group" onclick="window.location.href='question_generator.html'">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-200 transition-smooth">
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Funny & Absurd</h3>
+                        <p class="text-sm text-text-secondary mb-4">Create hilarious and unexpected scenarios</p>
+                        <div class="text-xs text-text-muted">
+                            "What if dogs were the dominant species?"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card 4 -->
+                <div class="card hover:shadow-medium transition-smooth cursor-pointer group" onclick="window.location.href='question_generator.html'">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-success-200 transition-smooth">
+                            <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Historical & Alternative</h3>
+                        <p class="text-sm text-text-secondary mb-4">Explore alternate histories and timelines</p>
+                        <div class="text-xs text-text-muted">
+                            "What if the internet was never invented?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Curiosity?</h2>
+            <p class="text-xl text-primary-100 mb-8">
+                Join thousands of curious minds exploring infinite possibilities through the power of "what if"
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="question_generator.html" class="bg-white text-primary px-8 py-4 rounded-xl font-semibold hover:bg-primary-50 transition-smooth">
+                    Ask Your First Question
+                </a>
+                <a href="community_gallery.html" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Explore Community
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c5.514 0 10 4.486 10 10s-4.486 10-10 10S6 21.514 6 16 10.486 6 16 6zm-1 4v6l4 4 1.414-1.414L17 15.172V10h-2z"/>
+                        </svg>
+                        <span class="text-xl font-bold">WhatIf Generator</span>
+                    </div>
+                    <p class="text-text-muted">
+                        Where curiosity meets infinite possibilities. Transform your "what if" questions into engaging discoveries.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Explore</h3>
+                    <ul class="space-y-2 text-text-muted">
+                        <li><a href="question_generator.html" class="hover:text-white transition-smooth">Create Questions</a></li>
+                        <li><a href="community_gallery.html" class="hover:text-white transition-smooth">Community Gallery</a></li>
+                        <li><a href="topic_explorer.html" class="hover:text-white transition-smooth">Topic Explorer</a></li>
+                        <li><a href="answer_display.html" class="hover:text-white transition-smooth">Answer Modes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Community</h3>
+                    <ul class="space-y-2 text-text-muted">
+                        <li><a href="user_profile.html" class="hover:text-white transition-smooth">Your Profile</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-smooth">Guidelines</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="hover:text-white transition-smooth">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-text-muted hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-muted hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-muted hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-700 mt-8 pt-8 text-center text-text-muted">
+                <p>&copy; 2025 WhatIf Generator. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animated question examples
+        const questions = [
+            "What if gravity was half as strong?",
+            "What if humans could photosynthesize?",
+            "What if time moved backwards for one day?",
+            "What if colors had flavors?",
+            "What if cats could talk but only complained?",
+            "What if we could upload memories?",
+            "What if lying was impossible?",
+            "What if dogs were the dominant species?"
+        ];
+
+        let currentQuestionIndex = 0;
+        const questionElement = document.getElementById('animated-question');
+
+        function animateQuestion() {
+            questionElement.style.opacity = '0';
+            setTimeout(() => {
+                currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+                questionElement.textContent = `"${questions[currentQuestionIndex]}"`;
+                questionElement.style.opacity = '1';
+            }, 300);
+        }
+
+        // Change question every 3 seconds
+        setInterval(animateQuestion, 3000);
+
+        // Main question input functionality
+        document.getElementById('main-question-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                window.location.href = 'question_generator.html';
+            }
+        });
+    </script>
+
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+
+<script>
+    // Check authentication on page load
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    const navLinks = document.querySelector('.hidden.md\\:flex'); // Adjust selector as needed
+    
+    if (user) {
+        // Add logout button and user greeting
+        navLinks.innerHTML += `
+            <span class="text-text-secondary">Welcome, ${user.username}!</span>
+            <button id="logoutBtn" class="btn-primary">Logout</button>
+        `;
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            window.location.reload();
+        });
+    } else {
+        // Add login/signup links
+        navLinks.innerHTML += `
+            <a href="login.html" class="text-text-secondary hover:text-primary">Login</a>
+            <a href="signup.html" class="btn-primary">Sign Up</a>
+        `;
+    }
+    
+    // Protect pages (e.g., redirect to login if not authenticated)
+    if (window.location.pathname.includes('question_generator.html') && !user) {
+        window.location.href = 'login.html';
+    }
+</script>
+</body>
+</html>
